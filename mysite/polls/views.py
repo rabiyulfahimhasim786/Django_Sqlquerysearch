@@ -8,6 +8,9 @@ from django.db.models import Q
 from .models import Film
 import requests
 def index(request):
+    results = Film.objects.get(id=1)
+    data = results.dropdownlist
+    print(data)
     return HttpResponse('Hello World')
 
 def sqltesst(request):
